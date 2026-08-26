@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #333;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #667eea;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      margin-left: 24px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #667eea;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #222;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #667eea;
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: #5a6fd6;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">MyWebsite</div>
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="#">Giới thiệu</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Xin chào! 👋</h1>
+      <p>Đây là trang web đơn giản được tạo bằng HTML và CSS. Bạn có thể chỉnh sửa nội dung này theo ý mình.</p>
+      <a href="#" class="btn">Bắt đầu ngay</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 MyWebsite. All rights reserved.
+  </footer>
+</body>
+</html>

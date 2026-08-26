@@ -1,0 +1,42 @@
+# Deploy trang web tĩnh lên VPS
+#
+# Cách hoạt động: mỗi khi push lên nhánh main, GitHub Actions sẽ
+# copy toàn bộ file web lên VPS qua SSH. Nginx trên VPS phục vụ
+# thư mục đó — không cần pm2 hay build gì cả.
+#
+# ── Chuẩn bị trên VPS (chỉ làm 1 lần) ──────────────────────────
+#   sudo apt update && sudo apt install -y nginx
+#   (nginx mặc định phục vụ thư mục /var/www/html)
+#
+# ── Khai báo Secrets trong repo GitHub ─────────────────────────
+#   Settings > Secrets and variables > Actions > New repository secret
+#   - VPS_HOST : địa chỉ IP của VPS (ví dụ: 103.12.34.56)
+#   - VPS_USER : user SSH (ví dụ: ubuntu hoặc root)
+#   - VPS_KEY  : nội dung file private key SSH (id_rsa / id_ed25519)
+#
+# ── Vị trí file ────────────────────────────────────────────────
+#   Đặt file này trong repo tại: .github/workflows/deploy.yml
+
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:   # Cho phép bấm chạy thủ công từ tab Actions
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v4
+
+      - name: Copy file web lên VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          source: "index.html"        # Thêm file/thư mục khác nếu có: "index.html,css/,js/,images/"
+          target: "/var/www/html"     # Thư mục web mặc định của nginx
