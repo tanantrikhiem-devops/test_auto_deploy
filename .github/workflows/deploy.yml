@@ -35,8 +35,8 @@ jobs:
       - name: Copy file web lên VPS
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "index.html"        # Thêm file/thư mục khác nếu có: "index.html,css/,js/,images/"
-          target: "/var/www/html"     # Thư mục web mặc định của nginx
+          target: "/opt/myweb/khiem.tanangroup.net"     # Thư mục web mặc định của nginx
