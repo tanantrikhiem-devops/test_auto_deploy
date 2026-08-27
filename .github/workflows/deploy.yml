@@ -45,15 +45,6 @@ jobs:
       - name: Lấy mã nguồn
         uses: actions/checkout@v4
 
-      - name: Copy file web lên VPS — phamtrikhiem.com
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ${{ env.WEB_FILES }}
-          target: "/opt/myweb/phamtrikhiem.com"
-
       - name: Copy file web lên VPS — khiem.tanangroup.net
         uses: appleboy/scp-action@v0.1.7
         with:
