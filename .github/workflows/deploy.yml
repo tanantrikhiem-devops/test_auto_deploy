@@ -25,11 +25,14 @@
 
 name: Deploy to VPS
 
+# ── TẠM NGẮT TỰ ĐỘNG DEPLOY ────────────────────────────────────
+# Đang deploy thủ công nên đã tắt trigger theo push.
+# Muốn bật lại: bỏ dấu # ở 3 dòng "push" bên dưới.
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:   # Cho phép bấm chạy thủ công từ tab Actions
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:   # Chỉ chạy khi bấm tay ở tab Actions
 
 env:
   # Danh sách file/thư mục được đưa lên server. Thêm trang mới thì bổ sung ở đây.
