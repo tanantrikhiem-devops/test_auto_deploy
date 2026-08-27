@@ -1,126 +1,378 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang chủ</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      color: #333;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 16px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    header .logo {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #667eea;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #555;
-      margin-left: 24px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #667eea;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 48px 40px;
-      max-width: 480px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .card h1 {
-      font-size: 2rem;
-      margin-bottom: 12px;
-      color: #222;
-    }
-
-    .card p {
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #667eea;
-      color: #fff;
-      padding: 12px 32px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .btn:hover {
-      background: #5a6fd6;
-      transform: translateY(-2px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 16px;
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 0.9rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Trang sở thích cá nhân: anime, âm nhạc, mô hình chính hãng, IT và decor phòng phong cách công nghệ.">
+<meta name="theme-color" content="#F5FBF9">
+<title>Sở thích của Khiêm</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">MyWebsite</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="index.html"><span class="dot"></span>Khiêm <i>· sở thích</i></a>
     <nav>
-      <a href="#">Trang chủ</a>
-      <a href="#">Giới thiệu</a>
-      <a href="#">Liên hệ</a>
+      <a href="tuoi-tho.html">Tuổi thơ</a>
+      <a href="am-nhac.html">Âm nhạc</a>
+      <a href="mo-hinh.html">Mô hình</a>
+      <a href="cong-nghe.html">Công nghệ</a>
+      <a href="goc-phong.html">Góc phòng</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <div class="card">
-      <h1>Xin chào! 👋</h1>
-      <p>Đây là trang web đơn giản được tạo bằng HTML và CSS. Bạn có thể chỉnh sửa nội dung này theo ý mình.</p>
-      <a href="#" class="btn">Bắt đầu ngay</a>
+<main class="wrap">
+
+  <!-- ── HERO ───────────────────────────────── -->
+  <div class="hero">
+    <div>
+      <span class="pill"><i class="pulse"></i> ONLINE · vui vẻ mỗi ngày</span>
+      <h1>Một chút <em>tuổi thơ</em>, một chút <em>âm nhạc</em><br>và rất nhiều <em>công nghệ</em>.</h1>
+      <p class="lead">
+        Chào bạn! Đây là góc nhỏ ghi lại những thứ khiến mình vui: cày Dragon Ball &amp; Naruto,
+        ôm guitar hát vu vơ, sưu tầm mô hình chính hãng, nghịch code và decor phòng theo phong cách tech.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#tuoi-tho">Xem sở thích →</a>
+        <a class="btn btn-ghost" href="#goc-phong">Ngó phòng mình</a>
+      </div>
     </div>
-  </main>
 
-  <footer>
-    © 2026 MyWebsite. All rights reserved.
-  </footer>
+    <div class="term">
+      <div class="term-bar"><i></i><i></i><i></i><b>so-thich.json</b></div>
+<pre><span class="p">$</span> <span class="k">whoami</span>
+Khiêm · dev ban ngày, otaku ban đêm
+
+<span class="p">$</span> <span class="k">cat</span> so-thich.json
+{
+  <span class="k">"tuoi_tho"</span> : [<span class="s">"Dragon Ball"</span>, <span class="s">"Naruto"</span>],
+  <span class="k">"am_nhac"</span>  : [<span class="s">"sáng tác"</span>, <span class="s">"hát"</span>, <span class="s">"guitar"</span>, <span class="s">"piano"</span>],
+  <span class="k">"mo_hinh"</span>  : [<span class="s">"mô hình chính hãng"</span>],
+  <span class="k">"cong_nghe"</span>: [<span class="s">"IT"</span>, <span class="s">"code"</span>, <span class="s">"server"</span>],
+  <span class="k">"goc_phong"</span>: [<span class="s">"decor tech"</span>, <span class="s">"LED mint"</span>]
+}
+
+<span class="p">$</span> <span class="k">status</span> --mood
+<span class="c">[</span> <span class="k">OK</span> <span class="c">]</span> năng lượng: <span class="k">████████░░</span> 89%<span class="cur"></span></pre>
+    </div>
+  </div>
+
+  <!-- ── SỞ THÍCH ───────────────────────────── -->
+  <section>
+    <div class="head">
+      <span class="num">01</span>
+      <h2>Những thứ mình mê</h2>
+      <span class="dash"></span>
+    </div>
+
+    <div class="grid">
+
+      <!-- ANIME -->
+      <article class="card wide" id="tuoi-tho">
+        <div class="art">
+          <svg viewBox="0 0 320 190" role="img" aria-label="Minh hoạ ngọc rồng 4 sao, phi tiêu ninja và băng đô lá">
+            <defs>
+              <radialGradient id="ballG" cx="35%" cy="30%">
+                <stop offset="0%" stop-color="#FFE9A8"/>
+                <stop offset="55%" stop-color="#FBBF24"/>
+                <stop offset="100%" stop-color="#D97706"/>
+              </radialGradient>
+              <g id="st4">
+                <polygon points="0,-7 1.65,-2.27 6.66,-2.16 2.66,0.87 4.11,5.66 0,2.8 -4.11,5.66 -2.66,0.87 -6.66,-2.16 -1.65,-2.27" fill="#B91C1C"/>
+              </g>
+            </defs>
+
+            <!-- vòng năng lượng -->
+            <circle cx="86" cy="82" r="52" fill="none" stroke="#14B8A6" stroke-opacity=".34" stroke-dasharray="4 7"/>
+            <circle cx="86" cy="82" r="62" fill="none" stroke="#14B8A6" stroke-opacity=".24" stroke-dasharray="2 9" class="spin" style="transform-origin:86px 82px"/>
+
+            <!-- ngọc rồng 4 sao -->
+            <g class="float">
+              <circle cx="86" cy="82" r="38" fill="url(#ballG)"/>
+              <circle cx="86" cy="82" r="38" fill="none" stroke="#FDE68A" stroke-opacity=".7"/>
+              <ellipse cx="72" cy="66" rx="12" ry="8" fill="#FFFDF0" opacity=".55" transform="rotate(-28 72 66)"/>
+              <use href="#st4" transform="translate(73,69) scale(.95)"/>
+              <use href="#st4" transform="translate(99,69) scale(.95)"/>
+              <use href="#st4" transform="translate(73,95) scale(.95)"/>
+              <use href="#st4" transform="translate(99,95) scale(.95)"/>
+            </g>
+
+            <!-- phi tiêu ninja -->
+            <circle cx="232" cy="74" r="46" fill="none" stroke="#14B8A6" stroke-opacity=".3" stroke-dasharray="3 8"/>
+            <g class="spin" style="transform-origin:232px 74px">
+              <g transform="translate(232,74)">
+                <polygon points="0,-34 7,-7 34,0 7,7 0,34 -7,7 -34,0 -7,-7"
+                         fill="#FFFFFF" stroke="#14B8A6" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="0" cy="0" r="6" fill="none" stroke="#14B8A6" stroke-width="2"/>
+              </g>
+            </g>
+
+            <!-- băng đô ninja -->
+            <rect x="16" y="146" width="288" height="26" rx="4" fill="#CDEFE7" stroke="#14B8A6" stroke-opacity=".38"/>
+            <rect x="126" y="140" width="68" height="38" rx="5" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1.6"/>
+            <circle cx="132" cy="146" r="1.8" fill="#14B8A6"/><circle cx="188" cy="146" r="1.8" fill="#14B8A6"/>
+            <circle cx="132" cy="172" r="1.8" fill="#14B8A6"/><circle cx="188" cy="172" r="1.8" fill="#14B8A6"/>
+            <path d="M168 150c-9-3-19 3-18 11 1 6 8 9 13 6 4-2 4-7 0-8" fill="none" stroke="#14B8A6" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M150 168l-8 8" fill="none" stroke="#14B8A6" stroke-width="2.2" stroke-linecap="round"/>
+            <text x="16" y="134" font-family="monospace" font-size="9" fill="#4F7D71">// power_level = 9001</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="kicker">01 · Tuổi thơ</span>
+          <h3>Dragon Ball &amp; Naruto</h3>
+          <p>Hai bộ nuôi lớn tuổi thơ. Xem đi xem lại vẫn nổi da gà ở cảnh Goku hoá Super Saiyan
+             và khoảnh khắc Naruto giữ trọn lời hứa với bạn bè. Vừa giải trí, vừa nạp lại tinh thần “không bỏ cuộc”.</p>
+          <ul class="tags">
+            <li>Dragon Ball Z</li><li>Super Saiyan</li><li>Naruto Shippuden</li><li>Rasengan</li><li>Cày lại lần thứ n</li>
+          </ul>
+          <a class="more" href="tuoi-tho.html">Đọc sâu về Dragon Ball &amp; Naruto</a>
+        </div>
+      </article>
+
+      <!-- ÂM NHẠC -->
+      <article class="card wide" id="am-nhac">
+        <div class="art">
+          <svg viewBox="0 0 320 190" role="img" aria-label="Minh hoạ đàn guitar, phím piano và thanh sóng âm">
+            <!-- guitar -->
+            <g stroke="#14B8A6" stroke-width="2" fill="none" stroke-linejoin="round">
+              <rect x="58" y="8" width="22" height="14" rx="3" fill="#EDF7F4"/>
+              <rect x="63" y="22" width="12" height="34" fill="#FFFFFF"/>
+              <path d="M69 56c-15 0-24 10-24 21 0 8 5 12 5 19 0 9-13 12-13 27 0 18 14 29 32 29s32-11 32-29c0-15-13-18-13-27 0-7 5-11 5-19 0-11-9-21-24-21z" fill="#FFFFFF"/>
+              <circle cx="69" cy="112" r="10" fill="#173A32"/>
+            </g>
+            <g stroke="#0D9488" stroke-opacity=".5" stroke-width="1">
+              <line x1="64" y1="20" x2="63" y2="140"/><line x1="67" y1="20" x2="66.5" y2="140"/>
+              <line x1="71" y1="20" x2="71.5" y2="140"/><line x1="74" y1="20" x2="75" y2="140"/>
+            </g>
+            <g fill="#14B8A6" opacity=".8">
+              <circle cx="69" cy="66" r="1.6"/><circle cx="69" cy="80" r="1.6"/><circle cx="69" cy="94" r="1.6"/>
+            </g>
+
+            <!-- sóng âm -->
+            <g class="eq" fill="#0D9488">
+              <rect x="132" y="46" width="7" height="52" rx="3"/>
+              <rect x="146" y="46" width="7" height="52" rx="3"/>
+              <rect x="160" y="46" width="7" height="52" rx="3"/>
+              <rect x="174" y="46" width="7" height="52" rx="3"/>
+              <rect x="188" y="46" width="7" height="52" rx="3"/>
+              <rect x="202" y="46" width="7" height="52" rx="3"/>
+            </g>
+
+            <!-- nốt nhạc -->
+            <g class="float">
+              <ellipse cx="240" cy="52" rx="9" ry="6.5" transform="rotate(-20 240 52)" fill="#14B8A6"/>
+              <ellipse cx="262" cy="58" rx="9" ry="6.5" transform="rotate(-20 262 58)" fill="#14B8A6"/>
+              <path d="M248 50V20l22 6v32" fill="none" stroke="#14B8A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M248 22l22 6" fill="none" stroke="#14B8A6" stroke-width="4.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- piano -->
+            <g transform="translate(126,110)">
+              <rect x="-4" y="-6" width="192" height="72" rx="5" fill="#EDF7F4" stroke="#14B8A6" stroke-opacity=".38"/>
+              <g fill="#FFFFFF" stroke="#CFE7E0" stroke-width="1">
+                <rect x="2" y="2" width="24" height="58" rx="3"/><rect x="28" y="2" width="24" height="58" rx="3"/>
+                <rect x="54" y="2" width="24" height="58" rx="3"/><rect x="80" y="2" width="24" height="58" rx="3"/>
+                <rect x="106" y="2" width="24" height="58" rx="3"/><rect x="132" y="2" width="24" height="58" rx="3"/>
+                <rect x="158" y="2" width="24" height="58" rx="3"/>
+              </g>
+              <rect x="80" y="2" width="24" height="58" rx="3" fill="#14B8A6" opacity=".6" class="glow"/>
+              <g fill="#173A32">
+                <rect x="18" y="2" width="16" height="36" rx="2"/><rect x="44" y="2" width="16" height="36" rx="2"/>
+                <rect x="96" y="2" width="16" height="36" rx="2"/><rect x="122" y="2" width="16" height="36" rx="2"/>
+                <rect x="148" y="2" width="16" height="36" rx="2"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="kicker">02 · Âm nhạc</span>
+          <h3>Sáng tác · Hát · Guitar · Piano</h3>
+          <p>Rảnh là ôm đàn. Guitar để hát cho vui, piano để mò hợp âm lạ, rồi thu nháp vài đoạn melody
+             tự sáng tác vào điện thoại lúc nửa đêm. Không chuyên nghiệp — chỉ cần đủ vui là được.</p>
+          <ul class="tags">
+            <li>Sáng tác</li><li>Vocal</li><li>Acoustic guitar</li><li>Piano</li><li>Home recording</li>
+          </ul>
+          <a class="more" href="am-nhac.html">Vào phòng nhạc của mình</a>
+        </div>
+      </article>
+
+      <!-- MÔ HÌNH -->
+      <article class="card" id="mo-hinh">
+        <div class="art">
+          <svg viewBox="0 0 320 200" role="img" aria-label="Minh hoạ mô hình nhân vật hoạt hình trong tủ kính có đèn">
+            <rect x="34" y="14" width="252" height="170" rx="10" fill="#FFFFFF" stroke="#14B8A6" stroke-opacity=".45" stroke-width="1.6"/>
+            <rect x="44" y="24" width="232" height="150" rx="6" fill="none" stroke="#CFE7E0"/>
+            <line x1="160" y1="24" x2="160" y2="174" stroke="#CFE7E0"/>
+            <g stroke="#14B8A6" stroke-opacity=".10" stroke-width="10">
+              <line x1="66" y1="176" x2="130" y2="26"/><line x1="92" y1="176" x2="156" y2="26"/>
+            </g>
+            <path d="M112 34h96l24 118H88z" fill="#14B8A6" opacity=".07"/>
+            <g class="float">
+              <polygon points="160,40 141,64 150,62 145,76 160,66 175,76 170,62 179,64" fill="#14B8A6"/>
+              <circle cx="160" cy="78" r="13" fill="#EDF7F4" stroke="#14B8A6" stroke-width="2"/>
+              <path d="M152 96h16l9 30-8 4-3 24h-12l-3-24-8-4z" fill="#EDF7F4" stroke="#14B8A6" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M152 100l-19 16 6 8" fill="none" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
+              <path d="M168 100l20 12-4 12" fill="none" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="140" cy="126" r="7" fill="#14B8A6" opacity=".55" class="glow"/>
+            </g>
+            <ellipse cx="160" cy="156" rx="44" ry="9" fill="#14B8A6" opacity=".13"/>
+            <rect x="122" y="152" width="76" height="12" rx="3" fill="#EDF7F4" stroke="#14B8A6" stroke-opacity=".55"/>
+            <g transform="translate(238,150)">
+              <circle r="17" fill="#FFFFFF" stroke="#14B8A6" stroke-width="1.6"/>
+              <path d="M-7 0l5 6 9-11" fill="none" stroke="#14B8A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <text x="44" y="196" font-family="monospace" font-size="9" fill="#4F7D71">authentic · no bootleg</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="kicker">03 · Sưu tầm</span>
+          <h3>Mô hình chính hãng</h3>
+          <p>Chỉ chơi hàng chính hãng có tem, đặt trong tủ kính có đèn hắt. Mỗi con là một nhân vật
+             trong bộ anime mình mê — vừa là kỷ niệm, vừa là món trang trí cho bàn làm việc.</p>
+          <ul class="tags"><li>Figure chính hãng</li><li>Tủ kính LED</li><li>Trưng bàn làm việc</li></ul>
+          <a class="more" href="mo-hinh.html">Xem bộ sưu tập &amp; cách soi hàng thật</a>
+        </div>
+      </article>
+
+      <!-- IT -->
+      <article class="card" id="cong-nghe">
+        <div class="art">
+          <svg viewBox="0 0 320 200" role="img" aria-label="Minh hoạ cửa sổ code với các dòng lệnh">
+            <rect x="26" y="20" width="268" height="160" rx="10" fill="#FFFFFF" stroke="#CFE7E0"/>
+            <path d="M26 30a10 10 0 0 1 10-10h248a10 10 0 0 1 10 10v18H26z" fill="#EDF7F4"/>
+            <circle cx="44" cy="34" r="4.5" fill="#0D9488"/><circle cx="60" cy="34" r="4.5" fill="#CFE7E0"/><circle cx="76" cy="34" r="4.5" fill="#CFE7E0"/>
+            <text x="150" y="38" font-family="monospace" font-size="10" fill="#5B8077">deploy.sh</text>
+            <line x1="60" y1="48" x2="60" y2="180" stroke="#CFE7E0"/>
+            <g font-family="monospace" font-size="9" fill="#4F7D71" text-anchor="end">
+              <text x="52" y="72">1</text><text x="52" y="90">2</text><text x="52" y="108">3</text>
+              <text x="52" y="126">4</text><text x="52" y="144">5</text><text x="52" y="162">6</text>
+            </g>
+            <g>
+              <rect x="72" y="64" width="52" height="9" rx="4" fill="#14B8A6" opacity=".85"/>
+              <rect x="130" y="64" width="86" height="9" rx="4" fill="#0D9488" opacity=".4"/>
+              <rect x="86" y="82" width="70" height="9" rx="4" fill="#2DD4BF" opacity=".55"/>
+              <rect x="162" y="82" width="40" height="9" rx="4" fill="#0D9488" opacity=".35"/>
+              <rect x="86" y="100" width="110" height="9" rx="4" fill="#0D9488" opacity=".3"/>
+              <rect x="100" y="118" width="60" height="9" rx="4" fill="#14B8A6" opacity=".6"/>
+              <rect x="166" y="118" width="76" height="9" rx="4" fill="#0D9488" opacity=".28"/>
+              <rect x="86" y="136" width="46" height="9" rx="4" fill="#2DD4BF" opacity=".45"/>
+              <rect x="72" y="154" width="34" height="9" rx="4" fill="#0D9488" opacity=".4"/>
+              <rect x="112" y="153" width="9" height="11" fill="#14B8A6" class="glow"/>
+            </g>
+            <text x="256" y="166" font-family="monospace" font-size="20" fill="#14B8A6" opacity=".5" text-anchor="middle">&lt;/&gt;</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="kicker">04 · CÔNG NGHỆ</span>
+          <h3>Code, server &amp; nghịch tech</h3>
+          <p>Nghề cũng là sở thích. Thích cảm giác build một thứ từ file trống, deploy lên server rồi
+             thấy nó chạy thật. Rảnh thì tự động hoá mấy việc lặt vặt cho vui tay.</p>
+          <ul class="tags"><li>Web</li><li>DevOps</li><li>Linux</li><li>Tự động hoá</li></ul>
+          <a class="more" href="cong-nghe.html">Xem stack &amp; quy trình deploy</a>
+        </div>
+      </article>
+
+      <!-- PHÒNG -->
+      <article class="card" id="goc-phong">
+        <div class="art">
+          <svg viewBox="0 0 320 200" role="img" aria-label="Minh hoạ góc bàn làm việc decor công nghệ với đèn LED mint">
+            <defs>
+              <filter id="blurLed" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+              <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#A7ECE1"/><stop offset="100%" stop-color="#FFFFFF"/>
+              </linearGradient>
+            </defs>
+            <rect x="30" y="16" width="260" height="104" rx="10" fill="#14B8A6" opacity=".16" filter="url(#blurLed)"/>
+            <rect x="30" y="16" width="260" height="104" rx="8" fill="none" stroke="#14B8A6" stroke-opacity=".35" stroke-dasharray="6 5" class="glow"/>
+
+            <!-- màn hình chính -->
+            <rect x="92" y="34" width="140" height="84" rx="6" fill="url(#scr)" stroke="#14B8A6" stroke-width="1.6"/>
+            <polyline points="102,96 116,96 124,70 134,108 144,82 152,96 222,96"
+                      fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- màn hình phụ -->
+            <g transform="translate(46,50) skewY(9)">
+              <rect x="0" y="0" width="52" height="66" rx="5" fill="#FFFFFF" stroke="#14B8A6" stroke-opacity=".6"/>
+              <g fill="#14B8A6" opacity=".45">
+                <rect x="8" y="10" width="30" height="4" rx="2"/><rect x="8" y="20" width="36" height="4" rx="2"/>
+                <rect x="8" y="30" width="22" height="4" rx="2"/><rect x="8" y="40" width="34" height="4" rx="2"/>
+                <rect x="8" y="50" width="18" height="4" rx="2"/>
+              </g>
+            </g>
+
+            <!-- case PC + quạt -->
+            <rect x="244" y="62" width="46" height="78" rx="5" fill="#EDF7F4" stroke="#14B8A6" stroke-opacity=".5"/>
+            <circle cx="267" cy="92" r="15" fill="#FFFFFF" stroke="#14B8A6" stroke-opacity=".5"/>
+            <g class="spin" style="transform-origin:267px 92px">
+              <g transform="translate(267,92)" fill="#14B8A6" opacity=".8">
+                <path d="M0 0L11 -6 12 4z"/><path d="M0 0L-2 12 -12 6z"/><path d="M0 0L-11 -8 0 -12z"/>
+              </g>
+            </g>
+            <circle cx="267" cy="92" r="3.5" fill="#EDF7F4" stroke="#14B8A6" stroke-opacity=".6"/>
+            <rect x="253" y="120" width="28" height="5" rx="2.5" fill="#14B8A6" opacity=".5" class="glow"/>
+
+            <!-- kệ mô hình mini -->
+            <g transform="translate(66,122)">
+              <polygon points="0,-16 -6,-4 -2,-5 -5,2 0,-3 5,2 2,-5 6,-4" fill="#14B8A6" opacity=".85"/>
+              <rect x="-5" y="0" width="10" height="16" rx="3" fill="#EDF7F4" stroke="#14B8A6" stroke-opacity=".6"/>
+              <rect x="-9" y="16" width="18" height="3" rx="1.5" fill="#14B8A6" opacity=".5"/>
+            </g>
+
+            <!-- bàn phím + chuột -->
+            <rect x="104" y="122" width="112" height="20" rx="4" fill="#FFFFFF" stroke="#14B8A6" stroke-opacity=".45"/>
+            <g fill="#14B8A6" opacity=".55">
+              <rect x="110" y="127" width="8" height="4" rx="1.5"/><rect x="122" y="127" width="8" height="4" rx="1.5"/>
+              <rect x="134" y="127" width="8" height="4" rx="1.5"/><rect x="146" y="127" width="8" height="4" rx="1.5"/>
+              <rect x="158" y="127" width="8" height="4" rx="1.5"/><rect x="170" y="127" width="8" height="4" rx="1.5"/>
+              <rect x="182" y="127" width="8" height="4" rx="1.5"/><rect x="194" y="127" width="8" height="4" rx="1.5"/>
+              <rect x="116" y="134" width="80" height="4" rx="2"/>
+            </g>
+            <ellipse cx="230" cy="132" rx="9" ry="12" fill="#FFFFFF" stroke="#14B8A6" stroke-opacity=".45"/>
+
+            <!-- mặt bàn -->
+            <rect x="20" y="144" width="280" height="10" rx="4" fill="#EDF7F4" stroke="#14B8A6" stroke-opacity=".38"/>
+            <rect x="24" y="154" width="272" height="4" rx="2" fill="#14B8A6" opacity=".22"/>
+            <text x="20" y="180" font-family="monospace" font-size="9" fill="#4F7D71">rgb: mint #14B8A6 · 24/7</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="kicker">05 · Góc phòng</span>
+          <h3>Decor phòng kiểu tech</h3>
+          <p>Bàn setup gọn, LED hắt tường màu mint, hai màn hình, case máy nhìn thấy quạt quay,
+             cạnh đó là mấy con mô hình. Phòng ưng mắt thì ngồi code cả ngày cũng không chán.</p>
+          <ul class="tags"><li>LED mint</li><li>Dual monitor</li><li>Cable gọn</li><li>Góc figure</li></ul>
+          <a class="more" href="goc-phong.html">Tham quan góc setup</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── STATS ──────────────────────────────── -->
+  <section>
+    <div class="head">
+      <span class="num">02</span>
+      <h2>Vài con số cho vui</h2>
+      <span class="dash"></span>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>02</b><span>bộ anime bất hủ</span></div>
+      <div class="stat"><b>04</b><span>kỹ năng âm nhạc</span></div>
+      <div class="stat"><b>100%</b><span>mô hình chính hãng</span></div>
+      <div class="stat"><b>24/7</b><span>đèn LED mint</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 · Made with <span style="color:var(--mint)">♥</span> + <span style="color:var(--mint)">☕</span> by Khiêm</span>
+    <span>Kamehameha 🌀 Rasengan · <a href="#tuoi-tho">về đầu trang</a></span>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -16,6 +16,12 @@
 #
 # ── Vị trí file ────────────────────────────────────────────────
 #   Đặt file này trong repo tại: .github/workflows/deploy.yml
+#
+# ── Tên miền ───────────────────────────────────────────────────
+#   phamtrikhiem.com      -> /opt/myweb/phamtrikhiem.com
+#   khiem.tanangroup.net  -> /opt/myweb/khiem.tanangroup.net
+#   Mỗi tên miền cần một server block nginx trỏ root vào đúng thư mục,
+#   và một bản ghi A trỏ tên miền về IP của VPS.
 
 name: Deploy to VPS
 
@@ -25,6 +31,10 @@ on:
       - main
   workflow_dispatch:   # Cho phép bấm chạy thủ công từ tab Actions
 
+env:
+  # Danh sách file/thư mục được đưa lên server. Thêm trang mới thì bổ sung ở đây.
+  WEB_FILES: "index.html,tuoi-tho.html,am-nhac.html,mo-hinh.html,cong-nghe.html,goc-phong.html,assets/"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -32,11 +42,20 @@ jobs:
       - name: Lấy mã nguồn
         uses: actions/checkout@v4
 
-      - name: Copy file web lên VPS
+      - name: Copy file web lên VPS — phamtrikhiem.com
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "index.html"        # Thêm file/thư mục khác nếu có: "index.html,css/,js/,images/"
-          target: "/opt/myweb/khiem.tanangroup.net"     # Thư mục web mặc định của nginx
+          source: ${{ env.WEB_FILES }}
+          target: "/opt/myweb/phamtrikhiem.com"
+
+      - name: Copy file web lên VPS — khiem.tanangroup.net
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: ${{ env.WEB_FILES }}
+          target: "/opt/myweb/khiem.tanangroup.net"
